@@ -1,0 +1,177 @@
+:root {
+    --primary-orange: #f39c12;
+    --dark-purple: #2c1a32;
+    --light-gray: #f4f4f4;
+    --white: #ffffff;
+    --dark-gray: #333;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* --- Top Bar --- */
+.top-bar {
+    background-color: var(--dark-purple);
+    color: white;
+    padding: 8px 10%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+}
+
+.top-bar span { margin-left: 20px; }
+
+/* --- Header --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: #555;
+    color: white;
+}
+
+.logo h1 { font-size: 32px; }
+.logo span { color: var(--primary-orange); font-size: 14px; }
+
+.booking-promo {
+    text-align: center;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.booking-promo button {
+    background: var(--primary-orange);
+    border: none;
+    padding: 6px 14px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- Nav --- */
+nav {
+    background-color: var(--primary-orange);
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover, nav a.active { background: #d35400; }
+
+/* --- Hero --- */
+.hero {
+    position: relative;
+    height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+        url('hero-bg.jpg') center/cover no-repeat;
+    display: flex; justify-content: flex-end; align-items: flex-end;
+    padding: 50px 10%;
+    color: white;
+}
+
+.hero-text h2 { font-size: 50px; }
+.hero-text p { font-size: 20px; }
+
+/* --- Social Sidebar --- */
+.social-sidebar {
+    position: fixed; left: 0; top: 30%;
+}
+
+.social-sidebar a {
+    display: block; width: 40px; height: 40px;
+    color: white; text-align: center;
+    line-height: 40px; margin-bottom: 5px;
+}
+
+.fb { background: #3b5998; }
+.tw { background: #00acee; }
+.gp { background: #db4a39; }
+.yt { background: #c4302b; }
+
+/* Quick Inquiry */
+.quick-inquiry {
+    position: fixed; right: 0; top: 35%;
+    background: #4a5568; color: white;
+    padding: 20px 10px;
+    font-weight: bold; cursor: pointer;
+    writing-mode: vertical-rl;
+    border-radius: 5px 0 0 5px;
+}
+
+/* WhatsApp */
+.whatsapp-btn {
+    position: fixed; bottom: 25px; left: 25px;
+    background: #25d366; width: 60px; height: 60px;
+    border-radius: 50%; display: flex;
+    align-items: center; justify-content: center;
+}
+
+.whatsapp-btn i { font-size: 32px; color: white; }
+
+/* Packages Cards */
+.packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+    padding: 50px 10%;
+}
+
+.package-card {
+    border: 1px solid #ddd;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.package-card img {
+    width: 100%; height: 200px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background: #222; color: #ccc;
+    padding: 50px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+footer h5 {
+    color: white; margin-bottom: 15px;
+}
+
+footer ul li:hover { color: var(--primary-orange); }
+
+/* Copyright */
+copyright {
+    background: #111; color: #777;
+    text-align: center; padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-text h2 { font-size: 30px; }
+}
